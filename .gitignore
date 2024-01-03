@@ -1,0 +1,5 @@
+colmap_workspace/images/
+colmap_workspace/my_evaluation/
+deepcharuco/
+camera-pose-estimation-using-aruco-marker-master.zip
+*.bag

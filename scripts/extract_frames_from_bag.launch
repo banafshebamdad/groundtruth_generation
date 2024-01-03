@@ -1,0 +1,29 @@
+<!--
+    #
+    # Banafshe Bamdad
+    # So Jun, 2023  10:47:46
+    #
+    # Exporting image and video data
+    # http://wiki.ros.org/rosbag/Tutorials/Exporting%20image%20and%20video%20data
+    #
+    # Usage: roslaunch extract_frames_from_bag.launch bag_file_path_name:=/path/to/bag/file_name.bag ros_topic_name:=/ros/topic/name
+    # e.g. ros_topic_name: /camera/infra1/image_rect_raw | /camera/color/image_raw
+    #
+    # Usage e.g.: $ roslaunch /media/banafshe/Banafshe_2TB/PhD/my_thesis/COLMAP/extract_frames_from_bag.launch bag_file_path_name:=/media/banafshe/Banafshe_2TB/PhD/my_thesis/data_collection/bags/11_Jun_2023_WinterThur_HB_RPG_D435i_4_4.bag ros_topic_name:=/camera/color/image_raw
+    #
+    # mv ~/.ros/frame*.jpg /your/desired/path/for/frames_from_rosbag
+    
+-->
+
+<launch>
+
+    <arg name="bag_file_path_name" />
+    <arg name="ros_topic_name" />
+    
+    
+    <node pkg="rosbag" type="play" name="rosbag" required="true" args="$(arg bag_file_path_name)"/>
+    <node name="extract" pkg="image_view" type="extract_images" respawn="false" required="true" output="screen" cwd="ROS_HOME">
+        <remap from="image" to="$(arg ros_topic_name)"/>
+    </node>
+
+</launch>

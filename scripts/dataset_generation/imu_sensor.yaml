@@ -1,0 +1,21 @@
+#Default imu sensor yaml file
+sensor_type: imu
+comment: VI-Sensor IMU (ADIS16448)
+
+# Sensor extrinsics wrt. the body-frame.
+T_BS:
+  cols: 4
+  rows: 4
+  data: [1.0, 0.0, 0.0, 0.0,
+         0.0, 1.0, 0.0, 0.0,
+         0.0, 0.0, 1.0, 0.0,
+         0.0, 0.0, 0.0, 1.0]
+rate_hz: 200
+
+# inertial sensor noise model parameters (static)
+# B.B copied from https://github.com/UZ-SLAMLab/ORB_SLAM3/blob/master/Examples/Stereo-Inertial/RealSense_D435i.yaml
+gyroscope_noise_density: 1e-3     # [ rad / s / sqrt(Hz) ]   ( gyro "white noise" )
+gyroscope_random_walk: 1e-6       # [ rad / s^2 / sqrt(Hz) ] ( gyro bias diffusion )
+accelerometer_noise_density: 1e-2  # [ m / s^2 / sqrt(Hz) ]   ( accel "white noise" )
+accelerometer_random_walk: 1e-4    # [ m / s^3 / sqrt(Hz) ].  ( accel bias diffusion )
+
