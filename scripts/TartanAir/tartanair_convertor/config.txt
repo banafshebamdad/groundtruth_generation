@@ -1,0 +1,13 @@
+#
+# Banafshe Bmdad
+# Jan 19, 2024
+#
+# DATASET_HOME: dataset home /path/to/rgb/depth/association.txt files
+# NPY_SOURCE: .npy source folder in original dataset
+# RGB_SOURCE: left_image folder in original dataset
+# NUM_OF_FRAMES: number of frames in sequence
+#
+DATASET_HOME=
+NPY_SOURCE=
+RGB_SOURCE=
+NUM_OF_FRAMES=

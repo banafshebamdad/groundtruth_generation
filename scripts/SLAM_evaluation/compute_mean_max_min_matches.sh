@@ -15,7 +15,7 @@ fi
 
 # Initialize max and min to the first value in the file
 read first_line < "$filename"
-first_value=$(echo "$first_line" | awk -F'#matches: ' '{print $2}')
+first_value=$(echo "$first_line" | awk -F'#matches:' '{print $2}')
 max=$first_value
 min=$first_value
 

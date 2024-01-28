@@ -20,8 +20,8 @@ def generate_associations_file(num_entries, output_file):
 
 if __name__ == "__main__":
     # Specify the number of entries and the output file
-    num_entries = 403  
-    output_file = "/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P037/associations.txt"
+    num_entries = 308  
+    output_file = "/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P038/associations.txt"
 
     generate_associations_file(num_entries, output_file)
 

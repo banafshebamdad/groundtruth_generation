@@ -13,9 +13,13 @@
 
 #source_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/training_data/hospital/Hard/hospital/hospital/Hard/P037/image_left"
 #destination_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P037/rgb"
+#source_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P037/npy"
+#destination_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P037/depth"
 
-source_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P037/npy"
-destination_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P037/depth"
+#source_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/training_data/hospital/Hard/hospital/hospital/Hard/P038/image_left"
+#destination_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P038/rgb"
+source_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/neighborhood/npy"
+destination_folder="/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/neighborhood/depth"
 
 mkdir -p "$destination_folder"
 

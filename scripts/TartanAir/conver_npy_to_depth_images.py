@@ -31,8 +31,11 @@ def convert_npy_to_tum_depth_images(input_folder, output_folder):
 
 if __name__ == "__main__":
     # Specify the input and output folders
-    input_folder = "/media/banafshe/Banafshe_2TB/Datasets/TartanAir/training_data/hospital/Hard/hospital/hospital/Hard/P037/depth_left"
-    output_folder = "/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P037/npy"
+    #input_folder = "/media/banafshe/Banafshe_2TB/Datasets/TartanAir/training_data/hospital/Hard/hospital/hospital/Hard/P037/depth_left"
+    #output_folder = "/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P037/npy"
+
+    input_folder = "/media/banafshe/Banafshe_2TB/Datasets/TartanAir/training_data/hospital/Hard/hospital/hospital/Hard/P038/depth_left"
+    output_folder = "/media/banafshe/Banafshe_2TB/Datasets/TartanAir/my_test_sequences/hospital_hard/P038/npy"
 
     convert_npy_to_tum_depth_images(input_folder, output_folder)
 
