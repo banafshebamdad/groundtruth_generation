@@ -27,6 +27,9 @@
  * Related Links
  * https://dev.intelrealsense.com/docs/projection-in-intel-realsense-sdk-20
  * https://cvg.cit.tum.de/data/datasets/rgbd-dataset/file_formats
+ *
+ * compile the script with the following command:
+ * $ $ g++ -std=c++17 07_capture_relative_associations.cpp -o 07_capture_relative_associations -I/usr/include/librealsense2 -I/usr/include/opencv4 -lrealsense2 -lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lstdc++fs
  */
 
 
@@ -48,8 +51,7 @@ void create_directory(const std::string& path) {
     std::filesystem::create_directories(path);
 }
 
-int main(int argc, char * argv[]) try
-{
+int main(int argc, char * argv[]) try {
     if (argc < 2) {
         std::cerr << "Usage: " << argv[0] << " <destination folder path>" << std::endl;
         return EXIT_FAILURE;
@@ -108,14 +110,10 @@ int main(int argc, char * argv[]) try
     assoc_file.close();
 
     return EXIT_SUCCESS;
-}
-catch (const rs2::error & e)
-{
+} catch (const rs2::error & e) {
     std::cerr << "RealSense error calling " << e.get_failed_function() << "(" << e.get_failed_args() << "):\n    " << e.what() << std::endl;
     return EXIT_FAILURE;
-}
-catch (const std::exception& e)
-{
+} catch (const std::exception& e) {
     std::cerr << e.what() << std::endl;
     return EXIT_FAILURE;
 }
