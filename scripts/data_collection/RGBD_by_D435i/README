@@ -1,0 +1,2 @@
+compile the script with the following command:
+$ $ g++ -std=c++17 07_capture_relative_associations.cpp -o 07_capture_relative_associations -I/usr/include/librealsense2 -I/usr/include/opencv4 -lrealsense2 -lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lstdc++fs

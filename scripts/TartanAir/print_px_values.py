@@ -24,7 +24,7 @@ def print_pixel_values(image_path):
     print("Min Pixel Value:", min_value)
 
 if __name__ == "__main__":
-    image_path = "000000_left_depth.png"
+    image_path = "old.png"
 
     print_pixel_values(image_path)
 
